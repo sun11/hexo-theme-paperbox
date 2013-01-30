@@ -1,0 +1,10 @@
+<% if (site.tags.length){ %>
+<div class="widget tag">
+  <h3 class="title"><%= __('tags') %></h3>
+  <ul class="entry">
+  <% site.tags.each(function(item){ %>
+    <a href="<%- config.root %><%- item.path %>"><li><%= item.name %><small><%= item.length %></small></li></a>
+  <% }); %>
+  </ul>
+</div>
+<% } %>

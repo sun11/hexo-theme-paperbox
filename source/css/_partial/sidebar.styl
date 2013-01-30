@@ -1,0 +1,134 @@
+#sidebar
+  width 270px
+  line-height 1.8em
+  @media screen and (max-width: 900px)
+    float none
+    width 100%
+  .widget
+    background #fff
+    margin-bottom 30px
+    break-word nowrap
+
+
+    .title
+      color color-meta
+      padding 15px 20px
+      font-size 1em
+      border-bottom 1px solid color-border
+      font-weight normal
+
+    .entry
+      font-size 0.9em
+      font-weight bold
+      padding 0px 0px
+      li
+        padding 3px 30px
+        color rgba(0,0,0,0.5)
+        &:hover 
+          background rgba(0, 0, 0, 0.3)
+          -webkit-box-shadow:0 3px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0) inset;
+          -moz-box-shadow:0 3px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0) inset;
+          box-shadow:0 3px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0) inset;
+
+    ul, ol, dl
+      list-style none
+      ul, ol, dl
+        list-style disc
+        margin-left 20px
+
+  .search
+    margin-bottom 30px
+    input
+      background #fff
+      font-family font-title
+      font-size 1em
+      padding 10px 15px
+      border 1px solid color-border
+      width 100%
+      box-sizing border-box
+      color color-meta
+      &:focus
+        color color-font
+
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      text-shadow: 0 1px 0 #fff;
+      -webkit-transition: border-color .218s;
+      -moz-transition: border .218s;
+      -o-transition: border-color .218s;
+      transition: border-color .218s;
+      background: #fff;
+      background: -webkit-gradient(linear,0% 40%,0% 70%,from(#FEFEFE),to(#FFFFFF));
+      background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(#FEFEFE),to(#FFFFFF));
+      border: solid 1px #dcdcdc;
+      border-radius: 2px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      margin-right: 10px;
+
+    input:hover
+      color: #333;
+      border-color: rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1); 
+      -webkit-box-shadow:0 3px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+
+    input:active
+      color: #000;
+      border-color: #444;
+
+  .tag
+    a
+      text-decoration none
+    small
+      margin-left 15px
+      color color-meta
+      &:before
+        content '('
+      &:after
+        content ')'   
+    position:relative;       
+    -webkit-box-shadow:0 6px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0) inset;
+    -moz-box-shadow:0 6px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0) inset;
+    box-shadow:0 6px 5px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0) inset;
+    &:before,&:after
+      content:"";
+      position:absolute; 
+      z-index:-1;
+      -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+      -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+      box-shadow:0 0 20px rgba(0,0,0,0.8);
+      top:50%;
+      bottom:0;
+      left:10px;
+      right:10px;
+      -moz-border-radius:100px / 10px;
+      border-radius:100px / 10px;
+    &:after
+      right:10px; 
+      left:auto;
+      -webkit-transform:skew(8deg) rotate(3deg); 
+      -moz-transform:skew(8deg) rotate(3deg);     
+      -ms-transform:skew(8deg) rotate(3deg);     
+      -o-transform:skew(8deg) rotate(3deg); 
+      transform:skew(8deg) rotate(3deg);
+
+  .twitter
+    li
+      border-bottom 1px solid color-border
+      padding 15px 20px
+      font-size 0.9em
+      &:last-of-type
+        border-bottom none
+    small
+      display block
+      margin-top 10px
+      color color-meta
+      line-height 1
+
+  .tagcloud
+    .entry
+      padding-right 5px
+    a
+      margin-right 10px

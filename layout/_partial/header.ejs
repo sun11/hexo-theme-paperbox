@@ -1,0 +1,53 @@
+<div class="alignleft">
+  <!--<h1><a href="<%- config.root %>"><%= config.title %></a></h1>-->
+
+  <div id="contenedor">
+  <ul class="cube">
+    <li class="cara"></li>
+    <li class="cara"></li>
+    <li class="cara"></li>
+    <li class="cara"></li>
+    <li class="cara"></li>
+	  <li class="cara">
+      <iframe src="<%- config.root %>imgs/11zhexo.svg" width="100px" height="100px">
+      </iframe>
+    </li>
+  </ul>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+
+		var cube = $('.cube'),
+				offset = $('#contenedor').offset(),
+				offsetleft = (offset.left + 100),
+				offsettop = (offset.top + 100);
+
+		cube.on({
+			mousemove: function(e) {
+				$(this).css('transform','rotateX(' + (e.pageY - offsettop) + 'deg) rotateY(' + (e.pageX - offsetleft) + 'deg)');
+				$(this).addClass('noanimar').removeClass('animar');
+			},
+			mouseout: function() {
+				$(this).css('transform','rotateX(0deg) rotateY(0deg)');
+				$(this).addClass('animar').removeClass('noanimar');
+			}
+		});
+
+		//console.log('x=' + offsetleft + ', y=' + offsettop);
+});
+</script>
+<script src="<%- config.root %>js/prefixfree.min.js"></script>
+
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    <% for (var i in theme.menu){ %>
+      <a href="<%- theme.menu[i] %>"><li><%= i %></li></a>
+    <% } %>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+
+
+<div class="clearfix"></div>

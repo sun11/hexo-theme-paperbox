@@ -1,0 +1,129 @@
+#header
+  text-shadow 0 0 1px #fff
+  margin 50px auto
+  a
+    color #999
+    &:hover
+      color color-link
+      text-decoration none
+    
+  h1
+    font-weight normal
+    font-size 2.5em
+    line-height 1
+
+  h2
+    font-weight normal
+    font-size 0.9em
+    line-height 1
+    margin 0px
+
+  
+  #contenedor {
+    position:relative;
+    left: 100px;
+    width:100px;
+    height:100px;
+    perspective:250;
+  }
+
+  #contenedor ul{
+    cursor:all-scroll;
+    display:block;
+    width:100%;
+    height:100%;
+    transform-style:preserve-3d;
+    margin:0;
+    padding:0;
+  }
+
+  #contenedor li{
+    background:rgba(255,255,255,1);
+    border:1px solid #555;
+    display:block;
+    list-style-type:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    font-size:1.5em;
+    text-align:center;
+    line-height:110px;
+  }
+
+  #contenedor .cara:nth-child(1){
+    background-color:rgba(0,0,0,0);
+    transform:rotate(0deg) translateZ(50px);
+  }
+
+  #contenedor .cara:nth-child(2){
+    transform:rotateX(-90deg) translateZ(50px);
+  }
+
+  #contenedor .cara:nth-child(3){
+    transform:rotateX(90deg) translateZ(50px);
+  }
+
+  #contenedor .cara:nth-child(4){
+    transform:rotateY(-90deg) translateZ(50px);
+  }
+
+  #contenedor .cara:nth-child(5){
+    transform:rotateY(90deg) translateZ(50px);
+  }
+
+  #contenedor .cara:nth-child(6){
+    transform:rotateY(180deg) translateZ(50px);
+  }
+
+  /************************************************************ animación */
+
+  #contenedor .animar{
+    transition:all 3s;
+  }
+
+  #contenedor .noanimar{
+    transition:none;
+  }
+  
+  #main-nav
+    font-family font-title
+    line-height 2.5em
+    a
+      color #333
+    ul
+      list-style none
+      li
+        font-weight bold
+        color rgba(238,238,238,0.3)
+        text-shadow 0px -1px 0px #888
+        background: #ffffff;
+        background: -webkit-gradient(linear,0% 40%,0% 70%,from(rgba(255, 255, 255, 0.9)),to(rgba(255, 255, 255, 0.7)));
+        background: -moz-linear-gradient(linear,0% 40%,0% 70%,from(rgba(255, 255, 255, 0.9)),to(rgba(255, 255, 255, 0.7)));
+        &:hover 
+          background rgba(30, 30, 30, 0.3)
+          color rgba(238,238,238,1)
+        float left
+        position:relative;
+        padding: 0 20px;       
+        &:before,&:after
+          content:"";
+          position:absolute; 
+          z-index:-1;
+          -webkit-box-shadow:4px 2px 4px rgba(0,0,0,0.8);
+          -moz-box-shadow:4px 2px 4px rgba(0,0,0,0.8);
+          box-shadow:4px 2px 4px rgba(0,0,0,0.8);
+          top:0px;
+          bottom:0px;
+          left:1px;
+          right:1px;
+          -moz-border-radius:100px / 10px;
+          border-radius:10px / 1px;  
+        &:after
+          right:3px; 
+          left:auto;
+          -webkit-transform:skew(8deg) rotate(3deg); 
+          -moz-transform:skew(8deg) rotate(3deg);     
+          -ms-transform:skew(8deg) rotate(3deg);     
+          -o-transform:skew(8deg) rotate(3deg); 
+          transform:skew(8deg) rotate(3deg);
+
