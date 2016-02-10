@@ -1,0 +1,65 @@
+// Colors
+color-default = #000
+//color-default = #555
+color-grey = #999
+color-border = #ddd
+color-link = #E32D40
+//color-link = #258fb8
+color-background = #eee
+color-sidebar-text = #777
+color-widget-background = #fff
+//color-widget-background = #ddd
+color-widget-border = #ccc
+color-footer-background = #262a30
+color-mobile-nav-background = #191919
+color-weibo = #d44137
+color-weixin = #38ad5a
+color-qq = #39B2E2
+color-renren = #105BA3
+color-more = #333
+color-twitter = #00aced
+color-facebook = #3b5998
+color-pinterest = #cb2027
+color-google = #dd4b39
+
+// Fonts
+font-sans = "微软雅黑","Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif
+//font-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
+font-serif = "Droid Serif", Georgia, Serif
+font-mono = "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+font-icon = FontAwesome
+font-icon-path = "http://libs.useso.com/js/font-awesome/4.2.0/fonts/fontawesome-webfont"
+font-icon-version = "4.0.3"
+font-size = 14px
+line-height = 1.6em
+line-height-title = 1.1em
+
+// Header
+logo-size = 40px
+subtitle-size = 16px
+banner-height = 300px
+banner-url = "images/banner.jpg"
+
+sidebar = hexo-config("sidebar")
+
+// Layout
+block-margin = 50px
+article-padding = 20px
+mobile-nav-width = 280px
+main-column = 9
+sidebar-column = 3
+
+if sidebar and sidebar isnt bottom
+  _sidebar-column = sidebar-column
+else
+  _sidebar-column = 0
+
+// Grids
+column-width = 80px
+gutter-width = 20px
+columns = main-column + _sidebar-column
+
+// Media queries
+mq-mobile = "screen and (max-width: 479px)"
+mq-tablet = "screen and (min-width: 480px) and (max-width: 767px)"
+mq-normal = "screen and (min-width: 768px)"
