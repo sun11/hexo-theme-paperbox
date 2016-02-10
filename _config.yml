@@ -2,38 +2,33 @@
 menu:
   Home: /
   Archives: /archives
+  About: /about
 rss: /atom.xml
+github: https://github.com/myname
+logo_title: MyLogo
+blog_title: My blog
 
 # Content
 excerpt_link: Read More
-fancybox: false
-mathjax: false
+fancybox: true
 
 # Sidebar
 sidebar: right
 widgets:
-- category
-- tag
-- tagcloud
-- archive
 - recent_posts
-- links
-
-# Links
-links:
-  主题作者: http://xiguabaobao.com
-  热前端: http://reqianduan.com
+- tag
+- archive
 
 # Miscellaneous
 google_analytics:
-favicon: /favicon.png
+favicon:
 twitter:
 google_plus:
-fb_admins: 
+fb_admins:
 fb_app_id:
 
 # Duoshuo
-duoshuo_shortname: 
+duoshuo_shortname:
 
-# Baidu share
-baidushare: true
+# Swiftype Search
+swiftype_key:

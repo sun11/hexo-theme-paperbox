@@ -22,7 +22,8 @@
   avoid-column-break()
 
 .archive-article-inner
-  @extend $block
+  background: color-widget-background
+  box-shadow: 0px 2px 4px -2px color-grey, inset 0 1px 1px rgba(255,255,255,0.97), 0 0 3px -1px rgba(0,0,0,0.8)
   padding: 10px
   margin-bottom: 15px
 
@@ -47,17 +48,15 @@
   display: block
 
 #page-nav
-  clearfix()
   margin: block-margin auto
-  background: #fff
-  box-shadow: 1px 2px 3px #ddd
-  border: 1px solid color-border
+  background: color-widget-background;
+  box-shadow: 1px 3px 2px #ddd
   border-radius: 3px
   text-align: center
   color: color-grey
   overflow: hidden
   a, span
-    padding: 10px 20px
+    padding: 10px 17px
     line-height: 1
     height: 2ex
   a
@@ -68,14 +67,18 @@
       color: #fff
   .prev
     float: left
+    padding: 10px 15px
   .next
     float: right
+    padding: 10px 15px
   .page-number
     display: inline-block
     @media mq-mobile
       display: none
   .current
-    color: color-default
-    font-weight: bold
+    color: #ddd
+    background: #555
   .space
     color: color-border
+    @media mq-mobile
+      display: none

@@ -26,7 +26,8 @@ html, body, #container
   height: 100%
 
 body
-  background: color-background
+  min-width: 320px
+  background: url("/img/white.png")
   font: font-size/line-height font-sans
   -webkit-text-size-adjust: 100%
 
@@ -34,7 +35,7 @@ body
   clearfix()
   max-width: (column-width + gutter-width) * columns + gutter-width
   margin: 0 auto
-  padding: 0 10px
+  padding: 0 gutter-width
 
 .inner
   column(columns)
@@ -58,11 +59,11 @@ body
   height: 100%
   width: 100%
   position: absolute
+  background: url("/img/white.png")
   top: 0
   left: 0
   transition: 0.2s ease-out
   z-index: 1
-  background: color-background
   .mobile-nav-on &
     left: mobile-nav-width
 

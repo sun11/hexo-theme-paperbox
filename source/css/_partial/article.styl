@@ -2,8 +2,25 @@
   margin: block-margin 0
 
 .article-inner
-  @extend $block
-  overflow: hidden
+  .curve-down
+    display: inline-block
+    height: 100%
+    width:100%
+    border:1px solid #e0e0e0
+    border:none
+    border-top-color:#efefef
+    border-bottom-color:#ccc
+    border-radius:100% / 66px
+    box-shadow:0 16px 6px -10px rgba(0,0,0,.2)
+
+  .fill-content
+    height: 100%
+    display: block
+    border-color: #fff
+    background: #f6f6f6
+    background: linear-gradient(top, rgba(249,249,249,1) 65%, rgba(247,247,247,1) 100%)
+    border-radius:10px
+    box-shadow:0 -6px 2px rgba(255,255,255,0), inset 0 4px 2px rgba(255,255,255,.97), 0 0 6px -2px rgba(0,0,0,.8)
 
 .article-meta
   clearfix()
@@ -11,6 +28,7 @@
 .article-date
   @extend $block-caption
   float: left
+  letter-spacing: 0
 
 .article-category
   float: left
@@ -43,6 +61,7 @@
   clearfix()
   color: color-default
   padding: 0 article-padding
+  word-wrap: break-word
   p, table
     line-height: line-height
     margin: line-height 0
@@ -113,6 +132,7 @@
     position: relative
     padding-top: (9 / 16 * 100)% // 16:9 ratio
     height: 0
+    margin: 1.6em 0
     overflow: hidden
     iframe, object, embed
       position: absolute
@@ -121,34 +141,87 @@
       width: 100%
       height: 100%
       margin-top: 0
+  .MathJax_Display
+    overflow-x: auto
+
+.toc-article
+  background: #f5f5f5
+  border: 1px dashed #bbb
+  margin: 1.5em 0 0.3em 1.5em
+  padding: 1.2em 1em 0 1em
+  width: 33%
+  @media mq-mobile
+    width: 100%
+    margin: 1.5em 0 1em 0
+
+.toc-title
+  font-size: 120%
+
+#toc
+  line-height: 1em
+  font-size: 0.9em
+  float: right
+  box-sizing: border-box
+  .toc
+    padding: 0
+    margin: 1em
+    line-height: 1.8em
+    li
+      list-style-type: none
+
+  .toc-child
+    margin: 0 0 0 1em
 
 .article-more-link a
   display: inline-block
+  color: #888
+  background: linear-gradient(to right, #e2e2e2 0%, #eee 30%)
+  border-top: 1px solid #fff
+  box-shadow: 0 -11px 9px -6px #f9f9f9, 0 -6px 3px -10px #eee, 0 5px 10px -5px #777, 0 6px 15px -7px #999
+  border-radius: 25px
   line-height: 1em
   padding: 6px 15px
-  border-radius: 15px
-  background: color-background
-  color: color-grey
-  text-shadow: 0 1px #fff
+  font-weight: 300
+  text-shadow: 0 1px 1px #fff
+  text-align: center
+  text-indent: 0px
+
+.article-more-link a:hover
+  color: #a0a0a0
+  background: linear-gradient(to right, #eee 0%, #f0f0f0 40%)
+  border-top: 1px solid #eee
   text-decoration: none
-  &:hover
-    background: color-link
-    color: #fff
-    text-decoration: none
-    text-shadow: 0 1px darken(color-link, 20%)
+  box-shadow: 0 -7px 5px -5px #f9f9f9, 0 -2px 5px -3px #eee, 0 2px 5px -2px #777, 0 5px 5px -5px #999
+  transition: all 0.3s
+
+.article-more-link a:active
+  color: #acacac
+  background: linear-gradient(to right, #f0f0f0 0%, #f5f5f5 50%)
+  border-top: 1px solid #f0f0f0
+  border-bottom: 1px solid rgba(240,240,240,0.8)
+  box-shadow: none
+  transition: all 0.3s
 
 .article-footer
+  padding: 0 article-padding
+
+.article-footer-content
   clearfix()
   font-size: 0.85em
   line-height: line-height
-  border-top: 2px solid color-border
-  padding-top: line-height
-  margin: 0 article-padding article-padding
+  border-top: 1px solid color-border
+  padding: 1.6em 10px
   a
     color: color-grey
     text-decoration: none
     &:hover
       color: color-default
+
+.article-tag-list
+  width: 100%
+  overflow: hidden
+  margin-bottom: 10px
+
 
 .article-tag-list-item
   float: left
@@ -233,6 +306,7 @@
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.2)
   border-radius: 3px
   margin-left: -145px
+  width: 200px
   overflow: hidden
   z-index: 1
   &.on
@@ -343,6 +417,20 @@ $article-share-link
   &:hover
     background: color-google
     text-shadow: 0 1px darken(color-google, 20%)
+
+.article-share-linkedin
+  @extend $article-share-link
+  &:before
+    content: "\f0e1"
+  &:hover
+    background: color-linkedin
+    text-shadow: 0 1px darken(color-linkedin, 20%)
+
+.qrcode
+  position: absolute
+  background: #fff
+  border: 1px solid color-background
+  z-index: 1
 
 .article-gallery
   background: #000

@@ -5,9 +5,45 @@ else
 
 .widget
   @extend $base-style
-  line-height: line-height
+  color: color-sidebar-text
+  padding: 0
+  border-radius: 3px
   word-wrap: break-word
-  font-size: 0.9em
+  line-height: 1.6em
+  font-size: 0.99em
+  a
+    color: color-grey
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+      color: color-link
+  ul, ol, dl
+    ul, ol, dl
+      margin-left: 15px
+      list-style: disc
+  ul
+    padding: 0px 0px
+    background-color: color-widget-background
+    border-radius: 3px
+    box-shadow: 0px 5px 3px -3px color-grey, inset 0 2px 1px rgba(255,255,255,0.97), 0 0 3px -1px rgba(0,0,0,0.8)
+  ul li
+    padding: 7px 30px
+    transition: color 0.1s
+    &:hover
+      background: color-grey
+      a
+        color: #fff
+        &:hover
+            text-decoration: underline
+      span
+        color: #fff
+    a
+      color: color-grey
+      text-decoration: none
+    &:first-child:hover
+      border-radius: 3px 3px 0 0
+    &:last-child:hover
+      border-radius: 0 0 3px 3px
   ul, ol
     list-style: none
     margin: 0

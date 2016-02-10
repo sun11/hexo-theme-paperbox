@@ -4,6 +4,8 @@
     <%- partial('post/category') %>
   </div>
   <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
     <%- partial('post/gallery') %>
     <% if (post.link || post.title){ %>
       <header class="article-header">
@@ -19,24 +21,28 @@
           </p>
         <% } %>
       <% } else { %>
+        <% if (!index && post.toc){ %>
+          <div id="toc" class="toc-article">
+            <strong class="toc-title"><%= __('contents') %></strong>
+            <%- toc(post.content, {list_number: false}) %>
+          </div>
+        <% } %>
         <%- post.content %>
       <% } %>
     </div>
     <footer class="article-footer">
-      <% if (config.baidushare || theme.baidushare){ %>
-        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link" data-share="baidu" data-title="<%= post.title %>"><%= __('share') %></a>
-      <% } else { %>
+      <div class="article-footer-content">
+        <%- partial('post/tag') %>
         <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <% } %>
-
-      <% if (post.comments && (config.duoshuo_shortname || theme.duoshuo_shortname)){ %>
-        <a href="<%- post.permalink %>#ds-thread" class="article-comment-link"><%= __('comments') %></a>
-      <% } else if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comments') %></a>
-      <% } %>
-
-      <%- partial('post/tag') %>
+        <% if (post.comments && (config.duoshuo_shortname || theme.duoshuo_shortname)){ %>
+          <a href="<%- post.permalink %>#ds-thread" class="article-comment-link"><%= __('comments') %></a>
+        <% } else if (post.comments && config.disqus_shortname ){ %>
+          <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comments') %></a>
+        <% } %>
+      </div>
     </footer>
+  </div>
+  </div>
   </div>
   <% if (!index){ %>
     <%- partial('post/nav') %>

@@ -1,6 +1,6 @@
 archive: Archives
 categories: Categories
-recent_posts: Recent Posts
+recent_posts: Recents
 tags: Tags
 tagcloud: Tag Cloud
 links: Links
@@ -18,6 +18,6 @@ rss: RSS
 showsidebar: Show Sidebar
 hidesidebar: Hide Sidebar
 updated: Updated
-totop: totop
+totop: To Top
 older: Older
 newer: Newer

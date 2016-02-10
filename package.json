@@ -1,6 +1,6 @@
 {
-  "name": "landscape-plus",
-  "version": "0.0.1",
+  "name": "hexo-theme-paperbox",
+  "version": "0.2.0",
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.2",
