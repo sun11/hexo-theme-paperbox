@@ -2,7 +2,7 @@
 
  [**Demo**](http://sun11.me)
  
- ![]http://77g58m.com1.z0.glb.clouddn.com/responsive-design.png)
+ ![](http://77g58m.com1.z0.glb.clouddn.com/responsive-design.png)
 
 A theme modified based on [Landscape-plus](https://github.com/xiangming/landscape-plus) theme based on Landscape theme, with some papers and a paperbox. The motivation is for my personal use. Hexo version is 3.1.1, nodejs v4.2.6.
 
