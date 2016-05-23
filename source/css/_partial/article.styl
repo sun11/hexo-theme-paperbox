@@ -62,9 +62,11 @@
   color: color-default
   padding: 0 article-padding
   word-wrap: break-word
+  overflow-x: auto
   p, table
     line-height: line-height
     margin: line-height 0
+    font-size: 1.1em
   h1, h2, h3, h4, h5, h6
     font-weight: bold
   h1, h2, h3, h4, h5, h6
@@ -86,16 +88,17 @@
   iframe
     border: none
   table
-    width: 100%
+    max-width: 100%
+    margin: line-height auto
     border-collapse: collapse
     border-spacing: 0
   th
     font-weight: bold
     border-bottom: 3px solid color-border
-    padding-bottom: 0.5em
+    padding: 10px 5px
   td
     border-bottom: 1px solid color-border
-    padding: 10px 0
+    padding: 10px 5px
   blockquote
     font-family: font-serif
     margin: line-height 0
@@ -141,8 +144,15 @@
       width: 100%
       height: 100%
       margin-top: 0
-  .MathJax_Display
+  .table-container
+    overflow: auto
+    th, td
+      max-width: 100px
+  .MathJax_Display,.MJXc-display,.MathJax_SVG_Display
     overflow-x: auto
+  .MathJax_Display,.MJXc-display
+    > span
+      padding: 0.5em
 
 .toc-article
   background: #f5f5f5
@@ -182,6 +192,7 @@
   line-height: 1em
   padding: 6px 15px
   font-weight: 300
+  font-size: font-size
   text-shadow: 0 1px 1px #fff
   text-align: center
   text-indent: 0px

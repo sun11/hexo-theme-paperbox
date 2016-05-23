@@ -11,6 +11,7 @@ blog_title: My Blog
 # Content
 excerpt_link: Read More
 fancybox: true
+mathjax: true
 
 # Sidebar
 sidebar: right
@@ -20,6 +21,7 @@ widgets:
 - archive
 
 # Miscellaneous
+wx_block: false
 google_analytics:
 favicon:
 twitter:

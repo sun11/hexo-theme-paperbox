@@ -1,6 +1,11 @@
+<% if ((config.mathjax || theme.mathjax)){ %>
+<%- partial('mathjax') %>
+<% } %>
+
 <!-- totop start -->
 <%- partial('totop') %>
 <!-- totop end -->
+
 <!-- swiftype search start -->
 <% if (theme.swiftype_key){ %>
 <%- partial('swiftype') %>
@@ -37,9 +42,9 @@ var duoshuoQuery = {short_name:"<%= config.duoshuo_shortname || theme.duoshuo_sh
 </script>
 <% } %>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script src="//cdn.bootcss.com/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
 
 <% if ((config.fancybox || theme.fancybox)){ %>
   <%- css('fancybox/jquery.fancybox') %>
