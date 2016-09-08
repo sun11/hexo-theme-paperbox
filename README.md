@@ -26,6 +26,10 @@ A theme modified based on [Landscape-plus](https://github.com/xiangming/landscap
 * **IE 9+ and the current versions of other browsers**
 * **DO NOT support weixin's inside browsing**
 
+### People Using Paperbox
+
+see [Examples](https://github.com/sun11/hexo-theme-paperbox/wiki/Examples)
+
 ---
  
 基于基于Landscape主题的Landscape-Plus主题由本人修改的主题，主要目的是自己使用，Hexo版本是3.1.1，nodejs 4.2.6
@@ -49,3 +53,7 @@ A theme modified based on [Landscape-plus](https://github.com/xiangming/landscap
 
 * **IE9+和目前版本的其它浏览器**
 * **不支持微信内置浏览**
+
+### Paperbox用户
+
+见 [Examples](https://github.com/sun11/hexo-theme-paperbox/wiki/Examples)
