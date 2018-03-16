@@ -33,7 +33,7 @@
       <% for (var i in theme.menu){ %>
         <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
       <% } %>
-      <a class="main-nav-link st-search-show-outputs">Search</a>
+      <a class="main-nav-link st-search-show-outputs"><%= __('search') %></a>
     </nav>
   </div>
 </header>
