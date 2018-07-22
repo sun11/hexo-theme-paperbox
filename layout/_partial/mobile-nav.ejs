@@ -2,5 +2,5 @@
   <% for (var i in theme.menu){ %>
     <a href="<%- url_for(theme.menu[i]) %>" class="mobile-nav-link"><%= i %></a>
   <% } %>
-  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
+  <a href="#search" class="mobile-nav-link st-search-show-outputs"><%= __('search') %></a>
 </nav>
